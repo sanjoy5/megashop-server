@@ -24,15 +24,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "backend/wsgi.py",
-            "methods": [
-                "GET",
-                "POST",
-                "PATCH",
-                "PUT",
-                "DELETE",
-                "OPTIONS"
-            ]
+            "dest": "backend/wsgi.py"
         }
     ]
 }

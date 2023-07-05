@@ -137,6 +137,7 @@ WSGI_APPLICATION = 'backend.wsgi.application'
 #         'HOST': 'localhost',
 #         'PORT': '5432',
 #     }
+# }
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
@@ -185,10 +186,12 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'static',
-    # BASE_DIR / 'frontend/build/static'
-]
+# STATICFILES_DIRS = [
+#     BASE_DIR / 'static',
+#     # BASE_DIR / 'frontend/build/static'
+# ]
+
+STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_build', 'static')
 
 MEDIA_URL = 'images/'
